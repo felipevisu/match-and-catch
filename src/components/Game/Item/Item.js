@@ -37,14 +37,14 @@ export const Item = ({ item }) => {
 
   const animations = {
     layout: true,
-    initial: "in",
+    initial: { opacity: 0, y: -200 },
     style: {
       position: isPresent ? "static" : "absolute",
     },
     animate: isPresent ? "in" : "out",
     whileTap: "tapped",
     variants: {
-      in: { scaleY: 1, opacity: 1 },
+      in: { scaleY: 1, opacity: 1, y: 0 },
       out: { scaleY: 0, opacity: 0, zIndex: -1 },
       tapped: { scale: 0.98, opacity: 0.5, transition: { duration: 0.1 } },
     },

@@ -13,6 +13,8 @@
   }
 
   .answer {
+    position: relative;
+    z-index: 100;
     min-width: 200px;
     text-align: center;
     height: 64px;

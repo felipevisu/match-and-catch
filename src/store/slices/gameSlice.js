@@ -55,10 +55,10 @@ const game = createSlice({
           state.items = [
             ...state.items.filter((item) => item.id !== newItem.id),
           ];
-          state.stack = [...state.stack, newItem];
+          state.stack = [newItem, ...state.stack];
         } else {
           const item = state.items.shift();
-          state.stack = [...state.stack, item];
+          state.stack = [item, ...state.stack];
         }
       }
     },
