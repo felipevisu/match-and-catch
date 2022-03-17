@@ -3,3 +3,21 @@
 @import "Stack.scss";
 @import "Item.scss";
 @import "Score.scss";
+@import "Start.scss";
+
+@font-face {
+  font-family: "Milliard";
+  src: url("../fonts/Rene-Bieder-Milliard-Book.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Milliard";
+  src: url("../fonts/Rene-Bieder-Milliard-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Leitura News";
+  src: url("../fonts/Leitura-News-Roman.otf") format("opentype");
+}

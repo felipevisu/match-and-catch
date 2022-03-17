@@ -3,8 +3,9 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import game from "./slices/gameSlice";
+import main from "./slices/mainSlice";
 
-const reducers = combineReducers({ game });
+const reducers = combineReducers({ main, game });
 
 const store = createStore(
   reducers,

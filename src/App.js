@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Game } from "./components";
+import { Main } from "./components";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Game />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
   );
