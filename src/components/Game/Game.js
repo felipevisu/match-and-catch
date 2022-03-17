@@ -19,7 +19,7 @@ export const Game = () => {
       setTimeout(() => {
         dispatch(setFinalScreen());
         dispatch(resetGame());
-      }, 2000);
+      }, 3000);
     }
   }, [inGame]);
 

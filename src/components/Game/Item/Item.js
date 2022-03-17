@@ -15,6 +15,10 @@ function matchPronoun(pronouns, pronoun) {
   return false;
 }
 
+function randomIntFromInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 export const Item = ({ item }) => {
   const [match, setMatch] = useState("");
   const dispatch = useDispatch();
@@ -41,12 +45,20 @@ export const Item = ({ item }) => {
     style: {
       position: isPresent ? "static" : "absolute",
     },
-    animate: isPresent ? "in" : "out",
+    animate: inGame ? (isPresent ? "in" : "out") : "over",
     whileTap: "tapped",
     variants: {
       in: { scaleY: 1, opacity: 1, y: 0 },
       out: { scaleY: 0, opacity: 0, zIndex: -1 },
       tapped: { scale: 0.98, opacity: 0.5, transition: { duration: 0.1 } },
+      over: {
+        y: 800,
+        x: randomIntFromInterval(-200, 200),
+        opacity: 1,
+        zIndex: 10,
+        rotate: randomIntFromInterval(-60, 60),
+        transition: { duration: 2 },
+      },
     },
     onAnimationComplete: () => !isPresent && safeToRemove(),
     transition: { type: "spring", stiffness: 500, damping: 50, mass: 1 },

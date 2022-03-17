@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addItem, changeInGame } from "../../../store/slices/gameSlice";
 
 import Item from "../Item";
+import GameOver from "./GameOver";
 
 export const Stack = () => {
   const distach = useDispatch();
@@ -29,6 +30,7 @@ export const Stack = () => {
 
   return (
     <div ref={stackDiv} className={`stack ${!inGame && "lose"}`}>
+      <GameOver />
       <div className="content">
         <AnimatePresence>
           {stack.map((item) => (
