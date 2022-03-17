@@ -16,7 +16,7 @@ export const Stack = () => {
       if (inGame) {
         distach(addItem());
       }
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [inGame]);
 

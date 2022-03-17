@@ -27,11 +27,20 @@ export function initializeItems() {
   }
 
   const items = shuffle(current.items);
+  const stack = items.slice(0, 3);
+
+  let possibleAnswers = [];
+  stack.forEach((item) => {
+    possibleAnswers = [...possibleAnswers, ...item.answers];
+  });
+  const answer = shuffle(possibleAnswers)[0];
+  const answers = [...current.answers.filter((ans) => ans !== answer), answer];
+
   const data = {
-    stack: items.slice(0, 4),
-    items: items.slice(4),
-    answers: current.answers,
-    answer: current.answers[0],
+    stack: stack,
+    items: items.slice(3),
+    answers: answers,
+    answer: answer,
   };
   return data;
 }
