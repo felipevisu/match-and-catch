@@ -14,7 +14,7 @@ export const Game = () => {
   }, [inGame]);
 
   return (
-    <div>
+    <div className="game">
       <Header />
       <Stack />
     </div>
