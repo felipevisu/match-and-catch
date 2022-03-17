@@ -1,0 +1,32 @@
+export default {
+  answers: ["simple present", "past simple", "past participle"],
+  items: [
+    { id: 1, content: "catch", answers: ["simple present"] },
+    { id: 2, content: "caught", answers: ["past simple", "past participle"] },
+    {
+      id: 3,
+      content: "cost",
+      answers: ["simple present", "past simple", "past participle"],
+    },
+    { id: 4, content: "fight", answers: ["simple present"] },
+    { id: 5, content: "fought", answers: ["past simple", "past participle"] },
+    {
+      id: 6,
+      content: "cut",
+      answers: ["simple present", "past simple", "past participle"],
+    },
+    { id: 7, content: "be", answers: ["simple present"] },
+    { id: 8, content: "was/were", answers: ["past simple"] },
+    { id: 9, content: "been", answers: ["past participle"] },
+    { id: 10, content: "burn", answers: ["simple present"] },
+    { id: 11, content: "burnt", answers: ["past simple", "past participle"] },
+    { id: 12, content: "build", answers: ["simple present"] },
+    { id: 13, content: "built", answers: ["past simple", "past participle"] },
+    { id: 14, content: "drive", answers: ["simple present"] },
+    { id: 15, content: "drove", answers: ["past simple"] },
+    { id: 16, content: "driven", answers: ["past participle"] },
+    { id: 17, content: "bite", answers: ["simple present"] },
+    { id: 18, content: "bit", answers: ["past simple"] },
+    { id: 19, content: "bitten", answers: ["past participle"] },
+  ],
+};

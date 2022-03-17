@@ -1,0 +1,20 @@
+.item {
+  height: 56px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  border: none;
+  margin: 4px;
+
+  &.correct {
+    background: #94f0c9;
+  }
+
+  &.wrong {
+    background: #ff999e;
+  }
+}

@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  height: 40vh;
+  background: #d7eafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 300ms;
+  color: #131853;
+
+  svg {
+    fill: #131853;
+  }
+
+  .answer {
+    min-width: 200px;
+    text-align: center;
+    height: 64px;
+    background: #131853;
+    border-radius: 8px 8px 0 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 14px 24px;
+    color: #fff;
+    transition: all ease 300ms;
+  }
+
+  .progress {
+    height: 10px;
+    width: 100%;
+    background: #ffb999;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+
+    .bar {
+      height: 10px;
+      background: #ff7535;
+      transition: all ease 300ms;
+    }
+  }
+
+  &.lose {
+    background: #ffd6d8;
+    color: #88070e;
+
+    svg {
+      fill: #88070e;
+    }
+
+    .answer {
+      background: #88070e;
+    }
+
+    .progress {
+      background: #f7646b;
+
+      .bar {
+        background: #e9353e;
+      }
+    }
+  }
+
+  &.win {
+    background: #94f0c9;
+    color: #22bf7d;
+
+    svg {
+      fill: #22bf7d;
+    }
+
+    .answer {
+      background: #109367;
+    }
+
+    .progress {
+      background: #4bd29a;
+
+      .bar {
+        background: #22bf7d;
+      }
+    }
+  }
+}
