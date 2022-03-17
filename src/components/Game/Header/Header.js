@@ -12,13 +12,13 @@ export const Header = () => {
   useEffect(() => {
     if (corrects === 0) {
       setTimeout(() => {
-        setWidth(33 * corrects);
+        setWidth(50 * corrects);
         setWin(false);
       }, 1000);
     } else {
-      setWidth(33 * corrects);
+      setWidth(50 * corrects);
     }
-    if (corrects >= 3) {
+    if (corrects >= 2) {
       setWin(true);
       dispatch(resetCorrects());
     }

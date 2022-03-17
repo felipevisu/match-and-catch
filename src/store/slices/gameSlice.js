@@ -33,7 +33,7 @@ const game = createSlice({
         ];
         state.items = [...state.items, item];
         state.corrects += 1;
-        if (state.corrects >= 3) {
+        if (state.corrects >= 2) {
           const oldAnswer = state.answers.shift();
           const newAnswer = state.answers[0];
           state.answers = [...state.answers, oldAnswer];
@@ -43,8 +43,23 @@ const game = createSlice({
     },
     addItem: (state) => {
       if (state.items.length > 0) {
-        const item = state.items.shift();
-        state.stack = [...state.stack, item];
+        const correctItems = [
+          ...state.stack.filter((item) =>
+            item.answers.some((answer) => answer === state.answer)
+          ),
+        ];
+        if (correctItems.length === 0) {
+          const newItem = state.items.find((item) =>
+            item.answers.some((answer) => answer === state.answer)
+          );
+          state.items = [
+            ...state.items.filter((item) => item.id !== newItem.id),
+          ];
+          state.stack = [...state.stack, newItem];
+        } else {
+          const item = state.items.shift();
+          state.stack = [...state.stack, item];
+        }
       }
     },
   },

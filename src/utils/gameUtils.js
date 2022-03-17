@@ -28,8 +28,8 @@ export function initializeItems() {
 
   const items = shuffle(current.items);
   const data = {
-    stack: items.slice(0, 5),
-    items: items.slice(5),
+    stack: items.slice(0, 4),
+    items: items.slice(4),
     answers: current.answers,
     answer: current.answers[0],
   };
