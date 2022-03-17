@@ -4,6 +4,7 @@ import { initializeItems } from "../../utils/gameUtils";
 const initialState = {
   ...initializeItems(),
   points: 0,
+  lastPoints: 0,
   mistakes: 0,
   corrects: 0,
   inGame: true,
@@ -13,6 +14,20 @@ const game = createSlice({
   name: "game",
   initialState,
   reducers: {
+    resetGame: (state) => {
+      const lastPoints = state.points;
+      return {
+        ...initializeItems(),
+        points: 0,
+        mistakes: 0,
+        corrects: 0,
+        lastPoints: lastPoints,
+        inGame: true,
+      };
+    },
+    resetPoints: (state) => {
+      state.points = 0;
+    },
     changeInGame: (state) => {
       state.inGame = !state.inGame;
     },
@@ -66,6 +81,7 @@ const game = createSlice({
 });
 
 export const {
+  resetGame,
   removeItem,
   addItem,
   changeInGame,

@@ -1,0 +1,66 @@
+.final-screen {
+  background: #d7eafe;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #131853;
+    padding: 16px;
+    width: 100%;
+    max-width: 320px;
+
+    h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #131853;
+      margin-bottom: 24px;
+    }
+
+    .final-score {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 115px;
+      letter-spacing: 0.4px;
+      color: #131853;
+    }
+
+    .record {
+      display: flex;
+      align-items: baseline;
+
+      span {
+        display: block;
+        margin: 0 3px;
+
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+
+      svg {
+        fill: #131853;
+      }
+    }
+
+    .buttons {
+      width: 100%;
+      margin-top: 32px;
+
+      button {
+        width: 100%;
+        border: none;
+      }
+    }
+  }
+}

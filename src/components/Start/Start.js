@@ -19,13 +19,17 @@ export const Start = () => {
         <div className="box">
           <h3 className="box-title">Practice</h3>
           <p>Review the latest verbs & tenses you learned</p>
-          <button onClick={() => handleClick()}>Let’s practice!</button>
+          <button className="primary" onClick={() => handleClick()}>
+            Let’s practice!
+          </button>
         </div>
 
         <div className="box">
           <h3 className="box-title">Challenge</h3>
           <p>Review the latest verbs & tenses you learned</p>
-          <button onClick={() => handleClick()}>Play!</button>
+          <button className="primary" onClick={() => handleClick()}>
+            Play!
+          </button>
         </div>
       </div>
     </div>
