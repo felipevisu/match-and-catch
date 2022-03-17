@@ -13,7 +13,7 @@ export const Start = () => {
   return (
     <div className="start-screen">
       <div className="content">
-        <h1 className="title">Con-junga-tion</h1>
+        <h1 className="title">Conjenga</h1>
         <p>Lorem ispums that explain what this experiences do</p>
 
         <div className="box">
