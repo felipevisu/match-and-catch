@@ -55,7 +55,6 @@ export const Item = ({ item }) => {
         y: 800,
         x: randomIntFromInterval(-200, 200),
         opacity: 1,
-        zIndex: 10,
         rotate: randomIntFromInterval(-60, 60),
         transition: { duration: 2 },
       },

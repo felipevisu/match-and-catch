@@ -22,10 +22,12 @@ export const Stack = () => {
   }, [inGame]);
 
   useEffect(() => {
-    const button = document.querySelector(".content .item");
-    if (button.offsetTop < stackDiv.current.offsetTop) {
-      distach(changeInGame());
-    }
+    setTimeout(() => {
+      const button = document.querySelector(".content .item");
+      if (button.offsetTop < stackDiv.current.offsetTop) {
+        distach(changeInGame());
+      }
+    }, 300);
   }, [stack]);
 
   return (
